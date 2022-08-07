@@ -1,71 +1,178 @@
-/* Typography */
-
-html {
-	font-family: 'Roboto', sans-serif;
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
-@media (min-width: 576px) {
-	html {
-		font-size: 14px;
-	}
+img {
+  height: 50px;
+  width: 50px;
+  vertical-align: middle
 }
 
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
+.text-container {
+  display: inline-block;
+  margin-left: 10px;
+  white-space: normal;
+  vertical-align: middle;
 }
 
-@media (min-width: 992px) {
-	html {
-		font-size: 18px;
-	}
+h1 {text-align: center;}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 200vh;
+  font-family: 'Cabin', Sans-serif;
 }
 
-@media (min-width: 1200px) {
-	html {
-		font-size: 20px;
-	}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
 }
 
-.icons-social i {
-	font-size: 3em;
+#main-menu {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background: #542657;
+  margin: 0px;  
+  z-index: 1;
 }
 
-/* Custom Styles */
-
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
 }
 
-main > .intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3.75em;
-	font-weight: 600;
+#main-menu li {
+  list-style-type: none;
+  font-size: 1rem;
 }
 
-main > .tagline {
-	font-size: 1.5rem;
-	margin: 1.5rem 0;
-	font-weight: 100;
+#main-menu a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
-.icons-social i {
-	padding: 10px;
+#main-menu a:hover {
+  text-decoration: underline;
 }
 
-.devto {
-	margin-bottom: -0.20rem;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.devto svg {
-	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
-	width: 2.65rem;
-	height: 2.65rem;
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(
+      to bottom, 
+      #3D0E61, #3D0E61 20%, 
+      white 20%, white 40%, 
+      #3D0E61 40%, #3D0E61 60%, 
+      white 60%, white 80%, 
+      #3D0E61 80%, #3D0E61 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #3D0E61;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #B9FAF8;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #B9FAF8;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+
+@media screen and (max-width: 750px) {
+  #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
 }
