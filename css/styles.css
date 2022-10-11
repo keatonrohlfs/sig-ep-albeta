@@ -18,8 +18,15 @@
   margin-bottom: 0;
   white-space: nowrap;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap:1vw;
+  padding: 0 32px 0 32px;
+  box-sizing: border-box;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 
 img {
@@ -63,7 +70,7 @@ body {
     z-index: -1;
 }
 
-.main-menu {
+#main-menu {
   display: block;
   height: 50px;
   width: 100%;
@@ -72,7 +79,7 @@ body {
   z-index: 1;
 }
 
-.main-menu ul {
+#main-menu ul {
   max-width: 800px;
   width: 100%;
   height: 100%;
@@ -84,18 +91,18 @@ body {
   z-index: 1;
 }
 
-.main-menu li {
+#main-menu li {
   list-style-type: none;
   font-size: 1rem;
 }
 
-.main-menu a {
+#main-menu a {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
-.main-menu a:hover {
+#main-menu a:hover {
   text-decoration: underline;
 }
 
@@ -110,6 +117,7 @@ body {
 }
 
 #hamburger-menu {
+  z-index: 3;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -141,6 +149,7 @@ body {
     transition: 0.3s;
     padding: 0px 10px;
     box-sizing: border-box;
+    z-index: 3;
 }
 
 #hamburger-menu h3 {
@@ -198,7 +207,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #542657;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -216,7 +225,7 @@ body {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: black;
 }
 
 /* Show the dropdown menu on hover */
@@ -224,11 +233,72 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 900px) {
-  .main-menu {
+.right, .left {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 10%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width: 32px;
+  padding: 16px;
+}
+
+.fa-instagram {
+  margin-left: 5px;
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: white;
+  width: 32px;
+  padding: 16px;
+}
+.bmp, .crest {
+  width: 128px;
+  height: 128px;
+}
+
+@media screen and (max-width: 1000px) {
+  #main-menu {
     display: none;
   }
   #hamburger-menu {
     display: inline;
   }
+  #twitter, #instagram {
+    font-size: 16px;
+    width: 32px;
+    padding: 16px;
+  }
+  .bmp, .crest {
+    width: 96px;
+    height: 96px;
+  }
+  .text-container {
+    font-size: 20px;
+  }
 }
+

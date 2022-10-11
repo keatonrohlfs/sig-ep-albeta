@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missions & Values</title>
-</head>
+  <link href='https://fonts.googleapis.com/css?family=Istok Web' rel='stylesheet'>
+  <link rel = "stylesheet" href="css/styles.css">
+  <style>
+    body {
+        font-family: 'Playfair Display';font-size: 22px;
+    }
+    </style>
+    </head>
 <body>
-    
+  <section>
+    <h1>
+    <div class="container">
+      <img src="images/sig_bm_logo_vector.png" alt="Sigma Phi Epsilon" style="width:128px;height:128px;">
+      <div class="text-container"><p>Sigma Phi Epsilon<br>University of Alabama</p></div>
+      <img src="images/crest-color.png" alt="Sigma Phi Epsilon" style="width:128px;height:128px;">
+    </div>
+  </h1>
+  </section>
+  <div class="main-menu">
+    <ul class="list-all">
+      <li><a href="index.html">Home</a></li>
+<li><a href="missions.html">Missions & Values</a></li>
+<li class="dropdown">
+  <a href="#" class="dropbtn">National</a>
+  <div class="dropdown-content">
+    <a href="#">SigEp Creed</a>
+    <a href="#">National Fraternity</a>
+    <a href="#">Alabama Beta National Page</a>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Chapter</a>
+      <div class="dropdown-content">
+    <a href="#">History</a>
+        <a href="#">Officers</a>
+        <a href="#">Committees</a>
+        <a href="#">Awards and Involvement</a>
+    <a href="#">News</a>
+    <a href="#">Balanced Man Scholarship</a>
+    <a href="#">International Fraternity Council</a>
+    <a href="#">UA Website</a>
+    <li><a href="#news">Recruitment</a></li>
+    <li><a href="#news">Alumni</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Parents</a>
+    <div class="dropdown-content">
+    <a href="#">Upcoming Events</a>
+    <li><a href="#news">Members</a></li></div>
+    </ul>
+  </div>
+  
+  <input type="checkbox" id="hamburger-input" class="burger-shower" />
+  <label id="hamburger-menu" for="hamburger-input">
+    <nav id="sidebar-menu">
+      <h3>Menu</h3>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="#missions.html">Missions & Values</a></li>
+        <li><a href="javascript:void(0)">Chapter</a></li>
+        <li><a href="#news">Recruitment</a></li>
+        <li><a href="#news">Alumni</a></li>
+        <li><a href="javascript:void(0)">Parents</a></li>
+        <li><a href="#news">Members</a></li>
+      </ul>
+    </nav>
+  </label>
+  
+  <div class="overlay"></div>
+
+<p>Test
+</p>
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var navbar = document.getElementsById("main-menu");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
 </body>
 </html>
