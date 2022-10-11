@@ -1,4 +1,8 @@
+.list-all{
+  display: flex;
+  gap: 20px;
 
+}
 
 .heading{
   display: flex;
@@ -15,7 +19,7 @@
   white-space: nowrap;
   display: flex;
   justify-content: center;
-  gap:1vh;
+  gap:1vw;
 }
 
 img {
@@ -175,23 +179,19 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  list-style-type: none;
+  font-size: 1rem;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.main-menu a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
 }
 
 /* Dropdown content (hidden by default) */
