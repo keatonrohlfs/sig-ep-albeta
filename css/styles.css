@@ -1,4 +1,8 @@
+.list-all{
+  display: flex;
+  gap: 20px;
 
+}
 
 .heading{
   display: flex;
@@ -14,8 +18,15 @@
   margin-bottom: 0;
   white-space: nowrap;
   display: flex;
+  justify-content: space-between;
+  gap:1vw;
+  padding: 0 32px 0 32px;
+  box-sizing: border-box;
+}
+.label {
+  display: flex;
   justify-content: center;
-  gap:1vh;
+  width: 80%;
 }
 
 img {
@@ -64,7 +75,7 @@ body {
   height: 50px;
   width: 100%;
   background: #542657;
-  margin: 0px;  
+  margin: 0px; 
   z-index: 1;
 }
 
@@ -87,7 +98,7 @@ body {
 
 #main-menu a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -106,6 +117,7 @@ body {
 }
 
 #hamburger-menu {
+  z-index: 3;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -137,6 +149,7 @@ body {
     transition: 0.3s;
     padding: 0px 10px;
     box-sizing: border-box;
+    z-index: 3;
 }
 
 #hamburger-menu h3 {
@@ -171,26 +184,121 @@ body {
    visibility: visible;
   opacity: 0.4;
 }
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  list-style-type: none;
+  font-size: 1rem;
 }
 
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
 
-@media screen and (max-width: 750px) {
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #542657;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.right, .left {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 10%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width: 32px;
+  padding: 16px;
+}
+
+.fa-instagram {
+  margin-left: 5px;
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: white;
+  width: 32px;
+  padding: 16px;
+}
+.bmp, .crest {
+  width: 128px;
+  height: 128px;
+}
+
+@media screen and (max-width: 1000px) {
   #main-menu {
     display: none;
   }
   #hamburger-menu {
     display: inline;
   }
+  #twitter, #instagram {
+    font-size: 16px;
+    width: 32px;
+    padding: 16px;
+  }
+  .bmp, .crest {
+    width: 96px;
+    height: 96px;
+  }
+  .text-container {
+    font-size: 20px;
+  }
 }
+
